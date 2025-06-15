@@ -3,10 +3,9 @@ import streamlit as st
 import pickle
 import requests
 
-from dotenv import load_dotenv
-from openai import api_key
-import os
-load_dotenv()
+
+
+
 st.title('Movie Recommender system')
 
 working_dataframe = pd.read_csv('processed_movies.csv')
@@ -33,7 +32,7 @@ def recommendations(movie_name):
 recommended_movies_poster_path=[]
 
 def fecthing_movies_details(movie_id):
-    api_key=os.getenv('TMDB_KEY')
+    api_key='b68a770b03924051f102d7627c2e18b4'
     url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}"
     response = requests.get(url)
 
