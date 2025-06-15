@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import pickle
 import requests
-from jupyter_server.utils import fetch
+
 from dotenv import load_dotenv
 from openai import api_key
 import os
